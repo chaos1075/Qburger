@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Delivery</title>
+        <img id="logo" src="logo.png" alt="Q Burger">
+    </head>
+    <body>
+        <h1>Delivery Information</h1>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="index.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="cart.html">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active btn btn-danger" href="#">Delivery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="payment.html">Payment</a>
+          </li>
+        </ul>
+        <form>
+            <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1 offset-sm-1">
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName" required>
+                </div>
+                <div class="col-sm-3 my-1">
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName" required>
+                </div>
+            </div>
+            <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1 offset-sm-1">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" required>
+                </div>
+                <div class="col-sm-3 my-1">
+                    <label for="inputPhone">Phone</label>
+                    <input type="number" class="form-control" id="inputPhone" required>
+                </div>
+            </div>
+            <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1 offset-sm-1">
+                    <label for="inputAddress1">Address Line 1</label>
+                    <input type="text" class="form-control" id="inputAddress1" required>
+                </div>
+                <div class="col-sm-3 my-1">
+                    <label for="inputAddress2">Address Line 2</label>
+                    <input type="text" class="form-control" id="inputAddress2">
+                </div>
+            </div>
+            <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1 offset-sm-1">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" required>
+                </div>
+                <div class="col-sm-2 my-1">
+                    <label for="inputState">State</label>
+                    <input type="text" class="form-control" id="inputState" required>
+                </div>
+                <div class="col-sm-1 my-1">
+                    <label for="inputZip">Zip Code</label>
+                    <input type="text" class="form-control" id="inputZip" required>
+                </div>
+            </div>
+        </form>
+        <p></p>
+        <p></p>
+        <!--Go To Payment button-->
+        <a class="btn btn-danger" href="payment.html" role="button" style="float: right;">Go To Payment</a>
+        <!--Back To Cart button-->
+        <a class="btn btn-danger" href="cart.html" role="button" style="float: left;">Back To Cart</a>
+    </body>
+</html>

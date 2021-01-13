@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Welcome to Q burger</title>
+        <script src="func.js"></script>
+        <img id="logo" src="logo.png" alt="Q Burger">
+    </head>
+    <body>
+        <h1>Menu</h1>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link active btn btn-danger" href="#">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="cart.html">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="delivery.html">Delivery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="payment.html">Payment</a>
+          </li>
+        </ul>
+        <!--<h2>Burgers</h2>-->
+        <div class="table-responsive-sm">
+            <table class="table table-borderless">
+                <tr>
+                    <td>
+                        <img src="cheese-burger.png" alt="Cheese Burger">
+                    </td>
+                    <td>
+                        <img src="double-cheeseburger.png" alt="Double Cheese Burger">
+                    </td>
+                    <td>
+                        <img src="triple-cheeseburger.png" alt="Bacon Cheese Burger">
+                    </td>
+                </tr>
+                <tr class="tabletitle">
+                    <td>
+                        Cheese Burger
+                        $4.99
+                    </td>
+                    <td>
+                        Double Cheese Burger
+                        $5.99
+                    </td>
+                    <td>
+                        Triple Cheese Burger
+                        $6.99
+                    </td>
+                </tr>
+                <tr>
+                    <!--Add and remove button for cheeseburger embeded inside the table-->
+                    <td>
+                        <table  class="center">
+                            <tr>
+                                <td>
+                                    <button type="button" onclick="decrement('cheeseBurger')" class="btn btn-outline-secondary">-</button>
+                                </td>
+                                <td>
+                                    <div id='cheeseBurger'>0</div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="increment('cheeseBurger')" class="btn btn-outline-secondary">+</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!--Add and remove button for double cheeseburger embeded inside the table-->
+                    <td>
+                        <table class="center">
+                            <tr>
+                                <td>
+                                    <button type="button" onclick="decrement('dbl_cheeseBurger')" class="btn btn-outline-secondary">-</button>
+                                </td>
+                                <td>
+                                    <div id='dbl_cheeseBurger'>0</div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="increment('dbl_cheeseBurger')" class="btn btn-outline-secondary">+</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!--Add and remove button for triple cheeseburger embeded inside the table-->
+                    <td>
+                        <table class="center">
+                            <tr>
+                                <td>
+                                    <button type="button" onclick="decrement('tpl_cheeseBurger')" class="btn btn-outline-secondary">-</button>
+                                </td>
+                                <td>
+                                    <div id='tpl_cheeseBurger'>0</div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="increment('tpl_cheeseBurger')" class="btn btn-outline-secondary">+</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+<!--Second Row-->
+                <tr>
+                    <td>
+                        <img src="fish-burger.png" alt="Fish Burger">
+                    </td>
+                    <td>
+                        <img src="hot-dog.png" alt="Hot Dog">
+                    </td>
+                    <td>
+                        <img src="french-fries.png" alt="French Fries">
+                    </td>
+                </tr>
+                <tr class="tabletitle">
+                    <td>
+                        Fish Burger
+                        $4.99
+                    </td>
+                    <td>
+                        Hot Dog
+                        $1.99
+                    </td>
+                    <td>
+                        French Fries
+                        $2.99
+                    </td>
+                </tr>
+                <tr>
+                    <!--Add and remove button for cheeseburger embeded inside the table-->
+                    <td>
+                        <table  class="center">
+                            <tr>
+                                <td>
+                                    <button type="button" onclick="decrement('fishBurger')" class="btn btn-outline-secondary">-</button>
+                                </td>
+                                <td>
+                                    <div id='fishBurger'>0</div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="increment('fishBurger')" class="btn btn-outline-secondary">+</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!--Add and remove button for double cheeseburger embeded inside the table-->
+                    <td>
+                        <table class="center">
+                            <tr>
+                                <td>
+                                    <button type="button" onclick="decrement('hotdog')" class="btn btn-outline-secondary">-</button>
+                                </td>
+                                <td>
+                                    <div id='hotdog'>0</div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="increment('hotdog')" class="btn btn-outline-secondary">+</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!--Add and remove button for triple cheeseburger embeded inside the table-->
+                    <td>
+                        <table class="center">
+                            <tr>
+                                <td>
+                                    <button type="button" onclick="decrement('frenchfries')" class="btn btn-outline-secondary">-</button>
+                                </td>
+                                <td>
+                                    <div id='frenchfries'>0</div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="increment('frenchfries')" class="btn btn-outline-secondary">+</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--Go To Cart button-->
+        <a class="btn btn-danger" href="cart.html" role="button" onclick="setAll()" style="float: right;">Go To Cart</a>
+        <!--<script>
+            let x = document.querySelector('#cheeseBurger').innerHTML;
+            sessionStorage.setItem('cheeseBurger_q', x);
+            // sessionStorage.setItem('cheeseBurger_q', document.getElementById('cheeseBurger').innerHTML);
+        </script> -->
+    </body>
+</html>

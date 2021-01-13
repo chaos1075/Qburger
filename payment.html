@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Payment</title>
+        <img id="logo" src="logo.png" alt="Q Burger">
+    </head>
+    <body>
+        <h1>Credit Card Information</h1>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="index.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="cart.html">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="delivery.html">Delivery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active btn btn-danger" href="#">Payment</a>
+          </li>
+        </ul>
+        <form>
+            <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1 offset-sm-1">
+                    <label for="inputName">Card Holder Name</label>
+                    <input type="text" class="form-control" id="inputName" required>
+                </div>
+                <div class="col-sm-3 my-1">
+                    <label for="inputNum">Card Number</label>
+                    <input type="number" class="form-control" id="inputNum" required>
+                </div>
+            </div>
+            <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1 offset-sm-1">
+                    <label for="inputMonth">Expiration Month (MM)</label>
+                    <input type="number" class="form-control" id="inputMonth" required>
+                </div>
+                <div class="col-sm-2 my-1">
+                    <label for="inputYear">Year (YYYY)</label>
+                    <input type="number" class="form-control" id="inputYear" required>
+                </div>
+                <div class="col-sm-1 my-1">
+                    <label for="inputCVV">CVV</label>
+                    <input type="number" class="form-control" id="inputCVV" required>
+                </div>
+            </div>
+            <!--<div class="form-row align-items-center">-->
+            <!--    <div class="col-sm-3 my-1 offset-sm-1">-->
+            <!--        <label for="inputAddress1">Address Line 1</label>-->
+            <!--        <input type="text" class="form-control" id="inputAddress1" required>-->
+            <!--    </div>-->
+            <!--    <div class="col-sm-3 my-1">-->
+            <!--        <label for="inputAddress2">Address Line 2</label>-->
+            <!--        <input type="text" class="form-control" id="inputAddress2">-->
+            <!--    </div>-->
+            <!--</div>-->
+            <!--<div class="form-row align-items-center">-->
+            <!--    <div class="col-sm-3 my-1 offset-sm-1">-->
+            <!--        <label for="inputCity">City</label>-->
+            <!--        <input type="text" class="form-control" id="inputCity" required>-->
+            <!--    </div>-->
+            <!--    <div class="col-sm-2 my-1">-->
+            <!--        <label for="inputState">State</label>-->
+            <!--        <input type="text" class="form-control" id="inputState" required>-->
+            <!--    </div>-->
+            <!--    <div class="col-sm-1 my-1">-->
+            <!--        <label for="inputZip">Zip Code</label>-->
+            <!--        <input type="text" class="form-control" id="inputZip" required>-->
+            <!--    </div>-->
+            <!--</div>-->
+        </form>
+        <p></p>
+        <p></p>
+        <!--Submit button-->
+        <a class="btn btn-danger" href="thankyou.html" role="button" style="float: right;">Place Order</a>
+        <!--Back To Delivery button-->
+        <a class="btn btn-danger" href="delivery.html" role="button" style="float: left;">Back To Delivery</a>
+
+    </body>
+</html>

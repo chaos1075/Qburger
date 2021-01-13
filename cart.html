@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>My Cart</title>
+        <script src="func.js"></script>
+        <img id="logo" src="logo.png" alt="Q Burger">
+    </head>
+    <body>
+        <h1>My Cart</h1>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="index.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active btn btn-danger" href="#">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="delivery.html">Delivery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger" href="payment.html">Payment</a>
+          </li>
+        </ul>
+        <h2>Order Details</h2>
+        <table class="table">
+            <!--to be filled by JS function-->
+        </table>
+        <div id="totalPayment" class="alert alert-danger" role="alert">
+            Your cart is empty!
+        </div>
+        <!--<p id="totalPayment">Your cart is empty!</p>-->
+        <script>
+            // let cheeseBurgerNum = sessionStorage.getItem('cheeseBurger');
+            // document.getElementById("cheeseburger").innerHTML = "Cheese Burger" + cheeseBurgerNum;
+            // let frenchfriesNum = sessionStorage.getItem('frenchfries');
+            // document.getElementById("frenchfries").innerHTML = "French Fries" + frenchfriesNum;
+            let ordered = getOrdered();
+            function generateTableHead(table, tableHead) {
+                let thead = table.createTHead();
+                let row = thead.insertRow();
+                for (let key of tableHead) {
+                    let th = document.createElement("th");
+                    let text = document.createTextNode(key);
+                    th.appendChild(text);
+                    row.appendChild(th);
+                }
+            }
+            let table = document.querySelector("table");
+            let tableHead = ['Product Ordered', 'Unit Price ($)', 'Quantity', 'Subtotal ($)'];
+            function generateTable(table, data) {
+                let totalPayment = 0;
+                for (let element of data) {
+                    let row = table.insertRow();
+                    for (key in element) {
+                        if (key !== 'id') {
+                            let cell = row.insertCell();
+                            let text = document.createTextNode(element[key]);
+                            cell.appendChild(text);
+                        }
+                        if (key === 'subtotal') {
+                            totalPayment += element[key];
+                        }
+                    }
+                }
+                return totalPayment;
+                // let row = table.insertRow();
+                // for (let i = 0; i < tableHead.length; i++) {
+                //     let cell = row.insertCell();
+                //     if (i === tableHead.length - 2) {
+                //         let text = document.createTextNode('Total Price');
+                //     }
+                //     let text = document.createTextNode('');
+
+                // }
+            }
+            totalPayment = generateTable(table, ordered);
+            generateTableHead(table, tableHead);
+            if (totalPayment > 0) {
+                document.getElementById("totalPayment").innerHTML = "Total Payment: $" + totalPayment;
+            }
+        </script>
+        <!--Go To Delivery button-->
+        <a class="btn btn-danger" href="delivery.html" role="button" style="float: right;">Go To Delivery</a>
+        <!--Back To Order button-->
+        <a class="btn btn-danger" href="index.html" role="button" style="float: left;">Back to Order</a>
+    </body>
+</html>
